@@ -53,17 +53,16 @@ class _StackCardState extends State<StackCard> {
     }
 
     return Stack(fit: StackFit.expand, children: <Widget>[
-      _cardStack(),
-      widget.displayIndicator ? _cardIndicator() : Container(),
       PageView.builder(
         onPageChanged: widget.onSwap,
         physics: BouncingScrollPhysics(),
         controller: _pageController,
         itemCount: widget.itemCount,
         itemBuilder: (context, index) {
-          return Container();
+          return Container( color: Colors.blueAccent);
         },
-      )
+      ),_cardStack(),
+      widget.displayIndicator ? _cardIndicator() : Container(color: Colors.pinkAccent),
     ]);
   }
 
