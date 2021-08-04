@@ -59,10 +59,10 @@ class _StackCardState extends State<StackCard> {
         controller: _pageController,
         itemCount: widget.itemCount,
         itemBuilder: (context, index) {
-          return Container( color: Colors.blueAccent);
+          return Container();
         },
       ),_cardStack(),
-      widget.displayIndicator ? _cardIndicator() : Container(color: Colors.pinkAccent),
+      widget.displayIndicator ? _cardIndicator() : Container(),
     ]);
   }
 
